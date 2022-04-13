@@ -1,4 +1,4 @@
-ARG IMAGE_NAME=arm64v8/openjdk
+ARG IMAGE_NAME=openjdk
 ARG IMAGE_TAG=8-jre
 FROM ${IMAGE_NAME}:${IMAGE_TAG}
 LABEL site="https://nifi.apache.org"
@@ -35,7 +35,7 @@ USER nifi
 # Download, validate, and expand Apache NiFi binary.
 RUN curl -fSL ${MIRROR_BASE_URL}/${NIFI_BINARY_PATH} -o ${NIFI_BASE_DIR}/nifi-${NIFI_VERSION}-bin.zip \
     && echo "$(curl ${BASE_URL}/${NIFI_BINARY_PATH}.sha256) *${NIFI_BASE_DIR}/nifi-${NIFI_VERSION}-bin.zip" | sha256sum -c - \
-    && unzip ${NIFI_BASE_DIR}/scripts/nifi-${NIFI_VERSION}-bin.zip -d ${NIFI_BASE_DIR} \
+    && unzip ${NIFI_BASE_DIR}/nifi-${NIFI_VERSION}-bin.zip -d ${NIFI_BASE_DIR} \
     && mv ${NIFI_BASE_DIR}/nifi-${NIFI_VERSION} ${NIFI_HOME} \
     && mkdir -p ${NIFI_HOME}/conf \
     && mkdir -p ${NIFI_HOME}/database_repository \
