@@ -1,7 +1,7 @@
 #!/bin/bash
 DOCKER_IMAGE="$(egrep -v '(^#|^\s*$|^\s*\t*#)' nifiVersion.txt)"
 echo "Running Docker Image: $DOCKER_IMAGE"
-docker run -d --platform linux/amd64 -p 8443:8443 -p 8080:8080 -p 8181:8181 $DOCKER_IMAGE
+docker run -d -p 8443:8443 -p 8080:8080 -p 8181:8181 $DOCKER_IMAGE
 
 
 # NIFI_REMOTE_INPUT_SECURE=
