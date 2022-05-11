@@ -12,7 +12,7 @@ This is going to be our target setup.
 
 **How to build the Environment**
 
-You must have an AWS account and AWs CLI installed and setup ([Follow link here to see how you do it](link to vid))
+You must have an AWS account and AWs CLI installed and setup [Follow link here to see how you do it](link to vid)
 
 **Clone the repo onto your localhost and run:**
 ```
