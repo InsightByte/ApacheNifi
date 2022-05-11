@@ -43,3 +43,8 @@ export PG_IMPORTED_ID=`/opt/nifi-toolkit/bin/cli.sh nifi pg-import --bucketIdent
 /opt/nifi-toolkit/bin/cli.sh nifi pg-start --processGroupId ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
 
 nifi pg-import --bucketIdentifier 0455d64e-ea40-4213-bbe4-359985de09f9 --flowIdentifier 6df2b6c1-249b-4af3-8f84-b57f32f6c5aa --flowVersion 1 --baseUrl http://http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
+
+
+
+# CREATE Registry client entires on all nifi instalations
+/opt/nifi-toolkit/bin/cli.sh nifi create-reg-client --baseUrl http://<public_ip_of_nifi>:8080 --registryClientUrl http://<private_ip_of_registry>:18080 --registryClientName PRD

@@ -1,9 +1,9 @@
 
-
+#!/bin/bash
+set +x
 ################ Run NiFi containers
-
+export public_ip=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
 docker pull apache/nifi
-
 
 
 docker run --restart always \
@@ -42,9 +42,6 @@ docker run --restart always \
   -e NIFI_WEB_HTTPS_PORT='' \
   "apache/nifi:latest"
 
-### Open Web browser for nifi-PRD
-http://$public_ip:8080/nifi
-### Open Web browser for nifi-STG
-http://$public_ip:8081/nifi
-### Open Web browser for nifi-DEV
-http://$public_ip:8082/nifi
+echo "### Open Web browser for nifi-PRD @ http://"$public_ip":8080/nifi" 
+echo "### Open Web browser for nifi-STG @ http://"$public_ip":8081/nifi" 
+echo "### Open Web browser for nifi-DEV @ http://"$public_ip":8082/nifi" 
