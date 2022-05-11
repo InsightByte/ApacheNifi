@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  parameters {
+      choice(name: 'REGISTRY_ENV', description: 'Registry Enviroment', choices: 'dev\nstg\nprd')
+      string(name: 'BUCKET_NAME', description: 'Bucket Name to create')
+      string(name: 'BUCKET_DESC', description: 'Bucket Name description')
+  }
+  stages {
+    stage('Run Registry'){
+        steps {
+            script {
+                sh('/opt/nifi-toolkit/bin/cli.sh session set nifi.reg.props /opt/nifi-toolkit/nifi-envs/registry-${REGISTRY_ENV} && /opt/nifi-toolkit/bin/cli.sh registry create-bucket --bucketName ${BUCKET_NAME} --bucketDesc ${BUCKET_DESC} ')
+            }
+        }
+    }
+  }
+}

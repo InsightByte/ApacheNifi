@@ -1,0 +1,45 @@
+pipeline {
+  agent any
+  parameters {
+      choice(name: 'REGISTRY_ENV', description: 'Registry Enviroment', choices: 'dev\nstg\nprd')
+      string(name: 'BUCKET_NAME', description: 'Bucket Name to create')
+      string(name: 'BUCKET_DESC', description: 'Bucket Name description')
+  }
+  stages {
+    stage('Run Registry'){
+        steps {
+            script {
+                sh('/opt/nifi-toolkit/bin/cli.sh session set nifi.reg.props /opt/nifi-toolkit/nifi-envs/registry-${REGISTRY_ENV} && /opt/nifi-toolkit/bin/cli.sh registry create-bucket --bucketName ${BUCKET_NAME} --bucketDesc ${BUCKET_DESC} ')
+            }
+        }
+    }
+  }
+}
+
+// Get Bucket Id
+export BUCKET_NAME='test'
+export BUCKET_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-buckets | grep -w ${BUCKET_NAME} | awk '{print $3}'`
+echo $BUCKET_IDENTIFIER
+
+// Get Flow Id 
+export FLOW_NAME='test'
+export FLOW_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-flows --bucketIdentifier $BUCKET_IDENTIFIER| grep -w ${FLOW_NAME} | awk '{print $3}'`
+echo $FLOW_IDENTIFIER
+
+//Get Latest Version 
+
+export FLOW_VERSION=`/opt/nifi-toolkit/bin/cli.sh registry  list-flow-versions --flowIdentifier ${FLOW_IDENTIFIER} | tail -n +4 | awk '{print $1}' | sed '$ d' | sort -nr | head -n 1`
+
+
+nifi pg-import --bucketIdentifier ${BUCKET_IDENTIFIER} --flowIdentifier ${FLOW_IDENTIFIER} --flowVersion ${FLOW_VERSION} --processGroupId ${processGroupId} --registryClientId ${registryClientId}3
+
+
+export PG_IMPORTED_ID=`/opt/nifi-toolkit/bin/cli.sh nifi pg-import --bucketIdentifier ${BUCKET_IDENTIFIER} --flowIdentifier ${FLOW_IDENTIFIER} --flowVersion ${FLOW_VERSION} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080`
+
+
+
+/opt/nifi-toolkit/bin/cli.sh nifi pg-enable-services --processGroupId ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
+
+/opt/nifi-toolkit/bin/cli.sh nifi pg-start --processGroupId ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
+
+nifi pg-import --bucketIdentifier 0455d64e-ea40-4213-bbe4-359985de09f9 --flowIdentifier 6df2b6c1-249b-4af3-8f84-b57f32f6c5aa --flowVersion 1 --baseUrl http://http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
