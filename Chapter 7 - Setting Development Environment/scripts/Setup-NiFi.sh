@@ -3,6 +3,8 @@
 set +x
 ################ Run NiFi containers
 export public_ip=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+
+
 docker pull apache/nifi
 
 

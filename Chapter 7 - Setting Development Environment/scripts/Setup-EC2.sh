@@ -29,9 +29,17 @@ export subnet_id=`echo $subnets | jq -r '.[0]'`
 #### Create a Security Group
 export sg_id=`aws ec2 create-security-group --group-name DemoNiFi --description "SG used for Demo NiFi" --vpc-id $vpc_id --output text`
 
+#### Create EIP and tag it
+export eip=`aws ec2 allocate-address` 
+export public_ip=`echo $eip| jq -r '.PublicIp'`
+export allocation_id=`echo $eip| jq -r '.AllocationId'`
+aws ec2 create-tags --resources $allocation_id --tags Key='Name',Value='DemoNiFi' Key='Owner',Value='InsightByte'
+
+
 #### find my local ip and add an ingress rule to allow all coming from your ip
 export local_ip=`dig +short myip.opendns.com @resolver1.opendns.com`
 aws ec2 authorize-security-group-ingress --group-name DemoNiFi --protocol all --port all --cidr $local_ip/32 --no-cli-pager
+aws ec2 authorize-security-group-ingress --group-name DemoNiFi --protocol all --port all --cidr $public_ip/32 --no-cli-pager
 
 #### create EC2 instance
 export ec2=`aws ec2 run-instances --image-id $ami --count 1 --instance-type $instance_type --key-name $key_name --security-group-ids $sg_id --subnet-id $subnet_id --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=DemoNiFi}]' --block-device-mapping "[ { \"DeviceName\": \"/dev/sda1\", \"Ebs\": { \"VolumeSize\": 100 } } ]"`
@@ -58,14 +66,15 @@ sleep 300
 
 ## Copy the scripts to the EC2 box
 ## Make sure you are in the scripts folder of your repo
-scp -i $key_name.pem install-toolkit-on-jenkins.sh run-Setup-Registry-Client.sh Setup-Registry-Client.sh Setup-Docker.sh Setup-Jenkins.sh Setup-NiFi.sh Setup-NiFi-Registry.sh ubuntu@$public_ip:~/.
+
+scp -i $key_name.pem scripts/*.sh ubuntu@$public_ip:~/.
 ssh -i $key_name.pem ubuntu@$public_ip 'sudo mkdir -p /opt/scripts && sudo mv ~/*.sh /opt/scripts && sudo chmod 775 /opt/scripts/*.sh'
 
 
 ## Login into your instance
 ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-Docker.sh'
 sleep 30 
-ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-Jenkins.sh'
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-Jenkins.sh' 
 sleep 30 
 ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi-Registry.sh'
 ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi.sh'
