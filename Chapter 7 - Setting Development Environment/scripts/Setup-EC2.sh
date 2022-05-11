@@ -48,23 +48,29 @@ aws ec2 associate-address --instance-id $ec2_id --allocation-id $allocation_id -
 
 
 
-
 # In Case you restart your terminal and oyu loose the public_ip values run this 
 export public_ip=`aws ec2 describe-addresses --filters "Name=tag-value,Values=DemoNiFi" | jq -r '.Addresses[0].PublicIp'`
+export key_name='InsightByte_demo'
 
+##################### Building Resource #######################################
+### if running in a single step ou might need to wait 5 min before you ec2 is up and running 
+sleep 300
 
 ## Copy the scripts to the EC2 box
-scp -i "InsightByte_demo.pem" install-toolkit-on-jenkins.sh run-Setup-Registry-Client.sh Setup-Registry-Client.sh Setup-Docker.sh Setup-Jenkins.sh Setup-NiFi.sh Setup-NiFi-Registry.sh ubuntu@$public_ip:~/.
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo mkdir -p /opt/scripts && sudo mv ~/*.sh /opt/scripts && sudo chmod 775 /opt/scripts/*.sh'
-
+## Make sure you are in the scripts folder of your repo
+scp -i $key_name.pem install-toolkit-on-jenkins.sh run-Setup-Registry-Client.sh Setup-Registry-Client.sh Setup-Docker.sh Setup-Jenkins.sh Setup-NiFi.sh Setup-NiFi-Registry.sh ubuntu@$public_ip:~/.
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo mkdir -p /opt/scripts && sudo mv ~/*.sh /opt/scripts && sudo chmod 775 /opt/scripts/*.sh'
 
 
 ## Login into your instance
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo /opt/scripts/Setup-Docker.sh'
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo /opt/scripts/Setup-Jenkins.sh'
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi-Registry.sh'
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi.sh'
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-Docker.sh'
+sleep 30 
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-Jenkins.sh'
+sleep 30 
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi-Registry.sh'
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/Setup-NiFi.sh'
+sleep 300
 ### You should wait for NiFi Services to be available and then run this cmd
-ssh -i "InsightByte_demo.pem" ubuntu@$public_ip 'sudo /opt/scripts/run-Setup-Registry-Client.sh'
+ssh -i $key_name.pem ubuntu@$public_ip 'sudo /opt/scripts/run-Setup-Registry-Client.sh'
 
 
