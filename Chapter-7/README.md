@@ -1,8 +1,9 @@
-# ApacheNifi
-
 Chapter 7 - NiFi Development Environment Setup
 
-I have to go thru this because my localhost is a Mac M1 - and Docker acts realy strange on it. 
+
+EC2-Env - if you are on a Mac M1 silicone(Docker acts realy strange on it)
+
+Docker 
 
 If you are on Windows or Intel Mac you can setup Docker locally. 
 
@@ -40,3 +41,28 @@ ApacheNifi/Chapter-7/EC2-Env/setup.sh
 **Note:**
 You must complete Jenkins plugin installation in Web Browser.
 
+
+
+# Local Docker Setup 
+
+This setup requires that you hoave docker installed locally. 
+![Chapter 7 - NiFi Local Docker Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
+** To run all images run the script bellow**
+```
+ApacheNifi/Chapter-7/Local-Docker/Setup-Local-Docker.sh
+
+```
+
+Will create one Jenkins container, one NiFi Registry container, three NiFi Containers (PRD/DEV/STG)
+
+
+# Local Installation Setup
+This setup requires you to run on Mac or Linux, it will download NiFi, NiFi Registry & NiFi Toolkit version 1.16.1, but you can change the version. (Edit script to fit your needs.)
+
+![Chapter 7 - NiFi Local Installation Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
+** To setup all services run the script:
+```
+ApacheNifi/Chapter-7/Local-Install/Setup-Local.sh
+```
+
+Will install in /opt NiFi Registry, NiFi Toolkit and three NiFi Containers (PRD/DEV/STG)
