@@ -46,7 +46,7 @@ You must complete Jenkins plugin installation in Web Browser.
 # Local Docker Setup 
 
 This setup requires that you hoave docker installed locally. 
-![Chapter 7 - NiFi Local Docker Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
+![Chapter 7 - NiFi Local Docker Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI-docker.png)
 ** To run all images run the script bellow**
 ```
 ApacheNifi/Chapter-7/Local-Docker/Setup-Local-Docker.sh
@@ -59,7 +59,7 @@ Will create one Jenkins container, one NiFi Registry container, three NiFi Conta
 # Local Installation Setup
 This setup requires you to run on Mac or Linux, it will download NiFi, NiFi Registry & NiFi Toolkit version 1.16.1, but you can change the version. (Edit script to fit your needs.)
 
-![Chapter 7 - NiFi Local Installation Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
+![Chapter 7 - NiFi Local Installation Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI-local.png)
 ** To setup all services run the script:
 ```
 ApacheNifi/Chapter-7/Local-Install/Setup-Local.sh
