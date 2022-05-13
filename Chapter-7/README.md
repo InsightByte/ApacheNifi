@@ -5,9 +5,9 @@ Chapter 7 - NiFi Development Environment Setup
 I have to go thru this because my localhost is a Mac M1 - and Docker acts realy strange on it. 
 
 If you are on Windows or Intel Mac you can setup Docker locally. 
-This is going to be our target setup.
 
-
+# EC2-Env Setup
+**This is going to be our target setup for EC2-Env.**
 ![Chapter 7 - NiFi Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
 
 **How to build the Environment**
