@@ -8,7 +8,7 @@ If you are on Windows or Intel Mac you can setup Docker locally.
 This is going to be our target setup.
 
 
-![Chapter 7 - NiFi Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter%207%20-%20Setting%20Development%20Environment/images/NIFI%20DEVELOPMENT.png)
+![Chapter 7 - NiFi Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI%20DEVELOPMENT.png)
 
 **How to build the Environment**
 
