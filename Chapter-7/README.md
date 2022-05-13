@@ -14,12 +14,29 @@ This is going to be our target setup.
 
 You must have an AWS account and AWs CLI installed and setup [Follow link here to see how you do it](link to vid)
 
+
+**Edit the config.sh file to match your AWS Environment**
+```
+ApacheNifi/Chapter-7/EC2-Env/config.sh
+# Ubuntu image we will use
+export ami='ami-0672b175139a0f8f4'
+# My VPC 
+export vpc_id='vpc-d2af15b7' 
+# Instance Type/Size
+export instance_type='t3.xlarge'
+# My Key name
+export key_name='InsightByte_demo'
+
+```
+
 **Clone the repo onto your localhost and run:**
 ```
-ApacheNifi/Chapter 7 - Setting Development Environment/scripts/Setup-EC2.sh
+ApacheNifi/Chapter-7/EC2-Env/setup.sh
+
 ```
 
 **Or you could run it step by step.**
 
 **Note:**
 You must complete Jenkins plugin installation in Web Browser.
+
