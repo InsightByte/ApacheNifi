@@ -60,7 +60,8 @@ You must complete Jenkins plugin installation in Web Browser.
 This setup requires you to run on Mac or Linux, it will download NiFi, NiFi Registry & NiFi Toolkit version 1.16.1, but you can change the version. (Edit script to fit your needs.)
 
 ![Chapter 7 - NiFi Local Installation Development Environment Setup](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-7/images/NIFI-local.png)
-** To setup all services run the script:
+
+### To setup all services run the script:
 ```
 ApacheNifi/Chapter-7/Local-Install/Setup-Local.sh
 ```
