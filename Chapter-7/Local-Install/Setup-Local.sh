@@ -1,8 +1,12 @@
 export version='1.16.1'
 export nifi_registry_port='18080'
-export nifi_prd_port='8080'
-export nifi_stg_port='8081'
-export nifi_dev_port='8082'
+export nifi_prd_port='8081'
+export nifi_stg_port='8082'
+export nifi_dev_port='8083'
+
+
+
+
 
 cd /opt
 wget https://dlcdn.apache.org/nifi/${version}/nifi-${version}-bin.zip
@@ -31,15 +35,15 @@ prop_replace () {
 
 echo "Create NiFi Toolkit Client configuration"
 mkdir -p /opt/nifi-toolkit/nifi-envs
-cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-prd
-cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-stg
-cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-dev
-cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/registry-prd
+cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-PRD
+cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-STG
+cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/nifi-DEV
+cp /opt/nifi-toolkit/conf/cli.properties.example /opt/nifi-toolkit/nifi-envs/registry-PRD
 
-prop_replace baseUrl http://localhost:${nifi_prd_port} /opt/nifi-toolkit/nifi-envs/nifi-prd
-prop_replace baseUrl http://localhost:${nifi_stg_port} /opt/nifi-toolkit/nifi-envs/nifi-stg
-prop_replace baseUrl http://localhost:${nifi_dev_port} /opt/nifi-toolkit/nifi-envs/nifi-dev
-prop_replace baseUrl http://localhost:${nifi_registry_port} /opt/nifi-toolkit/nifi-envs/registry-prd
+prop_replace baseUrl http://localhost:${nifi_prd_port} /opt/nifi-toolkit/nifi-envs/nifi-PRD
+prop_replace baseUrl http://localhost:${nifi_stg_port} /opt/nifi-toolkit/nifi-envs/nifi-STG
+prop_replace baseUrl http://localhost:${nifi_dev_port} /opt/nifi-toolkit/nifi-envs/nifi-DEV
+prop_replace baseUrl http://localhost:${nifi_registry_port} /opt/nifi-toolkit/nifi-envs/registry-PRD
 
 
 # Start NiFi Registry
@@ -106,3 +110,11 @@ echo " Start NiFi DEV"
 # rm -f nifi-${version}-bin.zip
 # rm -f nifi-toolkit-${version}-bin.zip
 # rm -f nifi-registry-${version}-bin.zip
+
+
+echo "### Adding Registry Client to PRD"
+/opt/nifi-toolkit/bin/cli.sh nifi create-reg-client --baseUrl http://localhost:${nifi_prd_port} --registryClientUrl http://localhost:${nifi_registry_port} --registryClientName PRD
+echo "### Adding Registry Client to STG"
+/opt/nifi-toolkit/bin/cli.sh nifi create-reg-client --baseUrl http://localhost:${nifi_stg_port}  --registryClientUrl http://localhost:${nifi_registry_port} --registryClientName PRD
+echo "### Adding Registry Client to DEV"
+/opt/nifi-toolkit/bin/cli.sh nifi create-reg-client --baseUrl http://localhost:${nifi_dev_port}  --registryClientUrl http://localhost:${nifi_registry_port} --registryClientName PRD
