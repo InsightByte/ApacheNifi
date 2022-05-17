@@ -2,22 +2,29 @@ pipeline {
   agent any
   parameters {
       choice(name: 'REGISTRY_ENV', description: 'Registry Enviroment', choices: 'dev\nstg\nprd')
+      choice(name: 'NIFI_TARGET_ENV', description: 'NiFi Target Enviroment', choices: 'dev\nstg\nprd')
       string(name: 'BUCKET_NAME', description: 'Bucket Name to create')
       string(name: 'BUCKET_DESC', description: 'Bucket Name description')
   }
   stages {
     stage('Run Registry'){
-        steps {
+        steps ('Step 1){
             script {
-                sh('/opt/nifi-toolkit/bin/cli.sh session set nifi.reg.props /opt/nifi-toolkit/nifi-envs/registry-${REGISTRY_ENV} && /opt/nifi-toolkit/bin/cli.sh registry create-bucket --bucketName ${BUCKET_NAME} --bucketDesc ${BUCKET_DESC} ')
+                sh('/opt/nifi-toolkit/bin/cli.sh session set nifi.reg.props /opt/nifi-toolkit/nifi-envs/registry-${REGISTRY_ENV} && export BUCKET_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-buckets | grep -w ${BUCKET_NAME} | awk '{print $3}'`')
+            }
+        }
+                steps ('Step 2){
+            script {
+                sh(' echo ${BUCKET_IDENTIFIER} ')
             }
         }
     }
+
   }
 }
 
 // Get Bucket Id
-export BUCKET_NAME='test'
+export BUCKET_NAME='demo'
 export BUCKET_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-buckets | grep -w ${BUCKET_NAME} | awk '{print $3}'`
 echo $BUCKET_IDENTIFIER
 
@@ -37,8 +44,8 @@ nifi pg-import --bucketIdentifier ${BUCKET_IDENTIFIER} --flowIdentifier ${FLOW_I
 export PG_IMPORTED_ID=`/opt/nifi-toolkit/bin/cli.sh nifi pg-import --bucketIdentifier ${BUCKET_IDENTIFIER} --flowIdentifier ${FLOW_IDENTIFIER} --flowVersion ${FLOW_VERSION} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080`
 
 
-
-/opt/nifi-toolkit/bin/cli.sh nifi pg-enable-services --processGroupId ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
+cfb7b64a-0180-1000-105a-7d989c6a57e9
+/opt/nifi-toolkit/bin/cli.sh nifi pg-enable-services --processGroupId cfb7b64a-0180-1000-105a-7d989c6a57e9 ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
 
 /opt/nifi-toolkit/bin/cli.sh nifi pg-start --processGroupId ${PG_IMPORTED_ID} --baseUrl http://ec2-3-104-35-61.ap-southeast-2.compute.amazonaws.com:8080
 
@@ -48,3 +55,11 @@ nifi pg-import --bucketIdentifier 0455d64e-ea40-4213-bbe4-359985de09f9 --flowIde
 
 # CREATE Registry client entires on all nifi instalations
 /opt/nifi-toolkit/bin/cli.sh nifi create-reg-client --baseUrl http://<public_ip_of_nifi>:8080 --registryClientUrl http://<private_ip_of_registry>:18080 --registryClientName PRD
+
+
+
+
+nifi pg-import --bucketIdentifier 4eaa8ae7-fad1-4236-a691-677c5990c464 --flowIdentifier 827e2a72-15a1-414a-9d1e-881bed19bb8a --flowVersion 1 --registryClientId PRD
+
+
+/opt/nifi-toolkit/bin/cli.sh nifi pg-status --processGroupId cfb7b64a-0180-1000-105a-7d989c6a57e9 | tail -n +4 | awk '{print $7}' | sed '$ d' | sort -nr | head -n 1

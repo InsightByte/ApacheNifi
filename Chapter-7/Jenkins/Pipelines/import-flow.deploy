@@ -1,0 +1,54 @@
+pipeline {
+  agent any
+  parameters {
+      choice(name: 'REGISTRY_ENV', description: 'Registry Enviroment', choices: 'DEV\nSTG\nPRD')
+      choice(name: 'NIFI_TARGET_ENV', description: 'NiFi Target Enviroment', choices: 'DEV\nSTG\nPRD')
+      string(name: 'BUCKET_NAME', description: 'Bucket Name to create')
+      string(name: 'FLOW_NAME', description: 'Flow Name')
+      string(name: 'FLOW_VERSION', description: 'Flow Version')
+      choice(name: 'FLOW_ENABLE', description: 'Enable Flow ?', choices: 'YES\nNO')
+      choice(name: 'FLOW_START', description: 'Start Flow ?', choices: 'YES\nNO')
+  }
+  stages {
+        stage('Run Registry'){
+            steps('Step 1'){
+                script {
+                    sh("""
+                    /opt/nifi-toolkit/bin/cli.sh session set nifi.reg.props /opt/nifi-toolkit/nifi-envs/registry-\${REGISTRY_ENV} && 
+                    export BUCKET_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-buckets | grep -w \${BUCKET_NAME} | awk '{print \$3}'` &&
+                    echo \${BUCKET_IDENTIFIER} && 
+                    export FLOW_IDENTIFIER=`/opt/nifi-toolkit/bin/cli.sh registry list-flows --bucketIdentifier \${BUCKET_IDENTIFIER} | grep -w \${FLOW_NAME} | awk '{print \$3}'` &&
+                    echo \${FLOW_IDENTIFIER} &&
+                    /opt/nifi-toolkit/bin/cli.sh session set nifi.props /opt/nifi-toolkit/nifi-envs/nifi-\${NIFI_TARGET_ENV} && 
+                    export PG_IMPORTED_ID=`/opt/nifi-toolkit/bin/cli.sh nifi pg-import --bucketIdentifier \${BUCKET_IDENTIFIER} --flowIdentifier \${FLOW_IDENTIFIER} --flowVersion \${FLOW_VERSION} | tail -n 1`
+                    echo '####### PG Imported with Success\n'
+                    if [ \${FLOW_ENABLE} == "YES" ]
+                    then
+                        echo "Running Enable Services"
+                        /opt/nifi-toolkit/bin/cli.sh nifi pg-enable-services pg-enable-services --processGroupId \${PG_IMPORTED_ID}
+                    else
+                        echo ""
+                    fi 
+                    echo 'Running status checks'
+                    echo '/opt/nifi-toolkit/bin/cli.sh nifi pg-status --processGroupId \$PG_IMPORTED_ID'
+                    export PG_STATUS_INVALID=`/opt/nifi-toolkit/bin/cli.sh nifi pg-status --processGroupId \$PG_IMPORTED_ID | tail -n +4 | awk '{print \$7}' | sed '\$ d' | sort -nr | head -n 1` &&
+                    if [ \${PG_STATUS_INVALID} == 0 ]
+                    then
+                        echo "All components are in valid state"
+                    else
+                        echo "Invalid componenets found - Please Review"
+                    fi 
+                    if [ \${FLOW_START} == "YES" ]
+                    then
+                        echo "Starting PG"
+                        /opt/nifi-toolkit/bin/cli.sh nifi pg-start --processGroupId \${PG_IMPORTED_ID}
+                    else
+                        echo ""
+                    fi 
+                    """)
+                }
+
+            }
+        }
+    }
+}
