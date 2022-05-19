@@ -46,6 +46,7 @@ prop_replace baseUrl http://localhost:${nifi_dev_port} /opt/nifi-toolkit/nifi-en
 prop_replace baseUrl http://localhost:${nifi_registry_port} /opt/nifi-toolkit/nifi-envs/registry-PRD
 
 
+
 # Start NiFi Registry
 sudo /opt/nifi-registry/bin/nifi-registry.sh start 
 
