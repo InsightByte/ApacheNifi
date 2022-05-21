@@ -6,6 +6,7 @@
 ### Setting some parameters
 ApacheNifi/Chapter-7/EC2-Env/config.sh
 
+
 ### !!!! Delete all resource if they exists
 aws ec2 delete-key-pair --key-name ${key_name} --no-cli-pager
 export instance_id=`aws ec2 describe-instances --filters 'Name=tag:Name,Values=DemoNiFi' --output text --query 'Reservations[*].Instances[*].InstanceId' --filters Name=instance-state-name,Values=running`
@@ -61,7 +62,7 @@ export ec2_id=`echo $ec2 | jq -r '.Instances[0].InstanceId'`
 sleep 20
 echo "Associate Public Ip"
 #### Associate the Ip with our instance
-aws ec2 associate-address --instance-id $ec2_id --allocation-id $allocation_id --no-cli-pager >> /dev/null
+aws ec2 associate-address --instance-id $ec2_id --allocation-id $allocation_id --no-cli-pager
 
 
 
