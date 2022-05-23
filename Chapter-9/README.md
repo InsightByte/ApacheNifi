@@ -5,6 +5,8 @@
 ## See Youtube tutorial for full explanation 
 ![Chapter 9 - Read and Write Data in Apache NiFi ](https://youtu.be/1VG-bVOECGM)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1VG-bVOECGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Download the Template used in the Video Tutorial
 ![Chapter 9 - Read and Write Data in Apache NiFi ](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-9/Chapter_9_-_Write-and-Read-with-NiFi-processors.xml)
 
