@@ -105,11 +105,11 @@ export pg_id_string=`echo $resources| jq -c '.resources[] | select(.name| contai
 export pg_id="${pg_id_string/\/process-groups\//}"
 ```
 
-### To start a Proces Group  
+### To Start a Proces Group  
 ```
 curl -H 'Content-Type: application/json' -XPUT -d '{"id":"'$pg_id'","state":"RUNNING"}' http://$hostname:$port/nifi-api/flow/process-groups/$pg_id
 ```
-### To start a Proces Group  
+### To Stop a Proces Group  
 ```
 curl -H 'Content-Type: application/json' -XPUT -d '{"id":"'$pg_id'","state":"STOPPED"}' http://$hostname:$port/nifi-api/flow/process-groups/$pg_id
 ```
