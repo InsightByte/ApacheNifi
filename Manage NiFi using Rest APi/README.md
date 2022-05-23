@@ -31,9 +31,9 @@ export pg_id=${pg_id_string/\/process-groups\//}
 ## Get Processor Id using PG Id and Processor Name
 ```
 export processors=`curl http://$hostname:$port/nifi-api/flow/process-groups/$pg_id`
-export processor_id=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .component.id'`
-export processor_version=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .revision.version'`
-export processor_status=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .status.runStatus'`
+export processor_id=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .component.id' | tr -d '"'`
+export processor_version=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .revision.version' | tr -d '"'`
+export processor_status=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .status.runStatus' | tr -d '"'`
 export clientId=$(uuidgen | tr "[:upper:]" "[:lower:]")
 ```
 
