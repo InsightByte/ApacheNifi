@@ -3,7 +3,7 @@
 
 
 ## See Youtube tutorial for full explanation 
-![Chapter 9 - Read and Write Data in Apache NiFi ]()
+![Chapter 9 - Read and Write Data in Apache NiFi ](https://youtu.be/1VG-bVOECGM)
 
 ## Download the Template used in the Video Tutorial
 ![Chapter 9 - Read and Write Data in Apache NiFi ](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-9/Chapter_9_-_Write-and-Read-with-NiFi-processors.xml)
