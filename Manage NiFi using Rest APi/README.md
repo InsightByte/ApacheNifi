@@ -24,8 +24,8 @@ export processors_name='Start'
 ```
 export resources=`curl -XGET http://$hostname:$port/nifi-api/resources`
 export pg_name='test_pg'
-export pg_id_string=`echo $resources| jq -c '.resources[] | select(.name| contains ("'$pg_name'")) | .identifier' | grep -v 'data\|policies\|operation' | grep 'process-groups'`
-export pg_id="${pg_id_string/\/process-groups\//}"
+export pg_id_string=`echo $resources| jq -c '.resources[] | select(.name| contains ("'$pg_name'")) | .identifier' | grep -v 'data\|policies\|operation' | grep 'process-groups' | tr -d '"'`
+export pg_id=${pg_id_string/\/process-groups\//}
 ```
 
 ## Get Processor Id using PG Id and Processor Name
