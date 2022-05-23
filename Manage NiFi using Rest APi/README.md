@@ -1,4 +1,6 @@
 
+# How to manage/interact with NiFi using the Rest Api endpoints. 
+
 NiFi Rest Api documentation can be found at https://nifi.apache.org/docs/nifi-docs/rest-api/index.html
 
 
