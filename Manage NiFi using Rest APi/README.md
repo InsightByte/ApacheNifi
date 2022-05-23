@@ -1,15 +1,16 @@
 
-# How to manage/interact with NiFi using the Rest Api endpoints. 
+# How to manage/interact with NiFi using the Rest Api endpoints.
 
 NiFi Rest Api documentation can be found at https://nifi.apache.org/docs/nifi-docs/rest-api/index.html
 
 
-A processor has 3 States **RUNNING, STOPPED & DISABLED**
+### A processor has 3 States **RUNNING, STOPPED & DISABLED**
 
-1 - You need to find the processor ID (use PG Name and Processor Name).
-2 - Find the current Version of the Processor.
-3 - Find current state.
-4 - Build Payload.
+### And to be able to change it's state you will need to do the following:
+1. You need to find the processor ID (use PG Name and Processor Name).
+2. Find the current Version of the Processor.
+3. Find current state. (this )
+4. Build Payload.
 
 ## Export some parameters
 ```
@@ -38,7 +39,7 @@ export clientId=$(uuidgen | tr "[:upper:]" "[:lower:]")
 
 # How to START as Processor
 ```
-curl --tlsv1.2 -i -H 'Content-Type: application/json' -XPUT -d '''
+curl -H 'Content-Type: application/json' -XPUT -d '''
 {
   "status": {
     "runStatus": "RUNNING"
@@ -57,7 +58,7 @@ curl --tlsv1.2 -i -H 'Content-Type: application/json' -XPUT -d '''
 
 # How to STOP as Processor
 ```
-curl --tlsv1.2 -i -H 'Content-Type: application/json' -XPUT -d '''
+curl -H 'Content-Type: application/json' -XPUT -d '''
 {
   "status": {
     "runStatus": "STOPPED"
@@ -77,7 +78,7 @@ curl --tlsv1.2 -i -H 'Content-Type: application/json' -XPUT -d '''
 
 # How to DISABLE as Processor
 ```
-curl --tlsv1.2 -i -H 'Content-Type: application/json' -XPUT -d '''
+curl -H 'Content-Type: application/json' -XPUT -d '''
 {
   "status": {
     "runStatus": "DISABLED"
