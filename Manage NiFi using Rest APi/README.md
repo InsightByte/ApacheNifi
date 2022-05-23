@@ -53,7 +53,7 @@ curl -H 'Content-Type: application/json' -XPUT -d '''
     "version": '$processor_version',
     "clientId": "'$clientId'"
   }
-} ''' http://$hostname:$port/nifi-api/processors/$pg_id
+} ''' http://$hostname:$port/nifi-api/processors/$processor_id
 ```
 
 # How to STOP as Processor
@@ -65,14 +65,14 @@ curl -H 'Content-Type: application/json' -XPUT -d '''
   },
   "component": {
     "state": "STOPPED",
-    "id": "'$pg_id'"
+    "id": "'$processor_id'"
   },
-  "id": "'$pg_id'",
+  "id": "'$processor_id'",
   "revision": {
     "version": '$processor_version',
     "clientId": "'$clientId'"
   }
-} ''' http://$hostname:$port/nifi-api/processors/$pg_id
+} ''' http://$hostname:$port/nifi-api/processors/$processor_id
 ```
 
 
@@ -85,14 +85,14 @@ curl -H 'Content-Type: application/json' -XPUT -d '''
   },
   "component": {
     "state": "DISABLED",
-    "id": "'$pg_id'"
+    "id": "'$processor_id'"
   },
-  "id": "'$pg_id'",
+  "id": "'$processor_id'",
   "revision": {
     "version": '$processor_version',
     "clientId": "'$clientId'"
   }
-} ''' http://$hostname:$port/nifi-api/processors/$pg_id
+} ''' http://$hostname:$port/nifi-api/processors/$processor_id
 ```
 
 
