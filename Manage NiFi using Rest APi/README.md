@@ -25,7 +25,8 @@ export pg_id_string=`echo $resources| jq -c '.resources[] | select(.name| contai
 export pg_id="${pg_id_string/\/process-groups\//}"
 ```
 
-## Get Processor Id using PG Id and Processor Name```
+## Get Processor Id using PG Id and Processor Name
+```
 export processors=`curl http://$hostname:$port/nifi-api/flow/process-groups/$pg_id`
 export processor_id=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .component.id'`
 export processor_version=`echo $processors | jq -c '.processGroupFlow.flow.processors[]| select(.component.name | contains("'$processors_name'")) | .revision.version'`
