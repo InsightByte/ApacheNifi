@@ -1,5 +1,5 @@
 
-![iFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/)
+![iFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/EL%20Logo.png)
 
 ### What is NiFi Expression Language ? 
 
