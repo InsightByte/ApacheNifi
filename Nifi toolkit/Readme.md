@@ -140,12 +140,8 @@ anonymous
 
 **Upload a template**
 ```
-#> nifi upload-template --input /opt/temp.xml --processGroupId d090bc40-0180-1000-f1dc-2b64efc5a2ab                                                                                                                                                                                                                                                                                        
-
-f0095527-0e9b-4bf9-99a3-3fd0fa99016a
+#> nifi upload-template --input /opt/temp.xml --processGroupId d090bc40-0180-1000-f1dc-2b64efc5a2ab                                                                 
 ```
-
-
 
 
 **List all NiFi Registry clients**
@@ -155,6 +151,7 @@ f0095527-0e9b-4bf9-99a3-3fd0fa99016a
 -   ----   ------------------------------------   ----------------------   
 1   PRD    d0a13e27-0180-1000-7d41-9e38685ff79b   http://localhost:18080   
 ```
+
 **Get the summary of your Cluster**
 ```
 #> nifi cluster-summary                                  
@@ -165,4 +162,3 @@ Connected to cluster: false
 ```
 
 
-**Create a NiFi nifi set    

@@ -1,0 +1,22 @@
+{
+    "name": "parameter context demo",
+    "description": "my parameter context description",
+    "parameters": [
+        {
+            "parameter": {
+                "name": "param1",
+                "description": "param1 description",
+                "sensitive": false,
+                "value": "param1 value"
+            }
+        },
+        {
+            "parameter": {
+                "name": "param2",
+                "description": "param2 description",
+                "sensitive": true,
+                "value": "param2 value"
+            }
+        }
+    ]
+}
