@@ -4,6 +4,7 @@ https://youtu.be/7SzqKeX1y9w
 
 ### Download the used template from here
 
+[Introduction to NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/Introduction_to_Expression_Language.xml)
 
 ### What is NiFi Expression Language ? 
 
