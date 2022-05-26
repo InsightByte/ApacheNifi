@@ -1,10 +1,4 @@
 
-### See Complete Video explanation here
-https://youtu.be/7SzqKeX1y9w
-
-### Download the used template from here
-
-[Introduction to NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Introduction_to_Expression_Language.xml)
 
 ### What is NiFi Expression Language ? 
 
@@ -24,3 +18,81 @@ It always starts with a dollar sign and an opening curly brace(```“${“```) a
 
 
 
+# Learning sequence should be in the below order
+
+## Introduction to NiFi Expression Language
+### See Complete Video explanation here for Introduction to NiFi Expression Language
+https://youtu.be/7SzqKeX1y9w
+
+### Download the used template from here
+[Introduction to NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Introduction_to_Expression_Language.xml)
+
+## How to use NiFi Expression Language for Data Type Conversion
+### See Complete Video explanation here for How to use NiFi Expression Language for Data Type Conversion
+
+
+### Download the used template from here
+[How to use NiFi Expression Language for Data Type Conversion](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Data_Type_Conversion.xml)
+
+
+## How to use NiFi Expression Language Logical Operators
+### See Complete Video explanation here for How to use NiFi Expression Language Logical Operators
+
+### Download the used template from here
+[How to use NiFi Expression Language Logical Operators](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Logic_Operators.xml)
+
+
+## How to use NiFi Expression Language Mathematical Operators
+### See Complete Video explanation here for How to use NiFi Expression Language Mathematical Operators
+
+
+### Download the used template from here
+[How to use NiFi Expression Language Mathematical Operators](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Mathematical_Operators.xml)
+
+## How to Manipulate Strings using NiFi Expression Language
+### See Complete Video explanation here for How to Manipulate Strings using NiFi Expression Language
+
+### Download the used template from here
+[How to Manipulate Strings using NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_String_Manipulation.xml)
+
+
+## How to do String Search using NiFi Expression Language
+### See Complete Video explanation here for How to do String Search using NiFi Expression Language
+
+
+### Download the used template from here
+[How to do String Search using NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_String_Search.xml)
+
+
+## Working with Subjectless Functions NiFi Expression Language
+### See Complete Video explanation here for Working with Subjectless Functions NiFi Expression Language
+
+
+### Download the used template from here
+[Working with Subjectless Functions NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Subjectless_Functions.xml)
+
+
+## How Encode and Decode using NiFi Expression Language
+### See Complete Video explanation here for How Encode and Decode using NiFi Expression Language
+
+
+### Download the used template from here
+[How Encode and Decode using NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Encode_Decode.xml)
+
+
+
+## How to do Json search using NiFi Expression Language
+### See Complete Video explanation here for How to do Json search using NiFi Expression Language
+
+
+### Download the used template from here
+[How to do Json search using NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Json_Search.xml)
+
+
+
+## How to do Evaluate Multiple Attributes using NiFi Expression Language
+### See Complete Video explanation here for How to do Evaluate Multiple Attributes using NiFi Expression Language
+
+
+### Download the used template from here
+[How to do Evaluate Multiple Attributes using NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Evaluating_Multiple_Attributes.xml)
