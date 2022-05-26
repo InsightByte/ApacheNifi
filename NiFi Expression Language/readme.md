@@ -18,7 +18,7 @@ Is the ability to reference attributes, compare them to other values, and manipu
 
 ### How do we use this Expresion Language ? 
 
-It always starts with a dollar sign and an opening curly brace(```“${“```) and ends with a closing curly brace(```“}”```). The first variable would be either an attribute from the FlowFile(first priority) or from the Variable Registry. Then we can add a colon and a function. 
+It always starts with a dollar sign and an opening curly brace(```“${“```) and ends with a closing curly brace(```“}”```). The first variable would be either an ```attribute``` from the ```FlowFile(first priority)``` or from the ```Variable Registry```. Then we can add a colon and a function. 
 #### Example: 
 ```${variable:function()}```
 
