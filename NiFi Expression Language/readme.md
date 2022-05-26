@@ -28,6 +28,8 @@ https://youtu.be/7SzqKeX1y9w
 #### Download the used template from here
 [Introduction to NiFi Expression Language](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Introduction_to_Expression_Language.xml)
 
+
+
 ## How to use NiFi Expression Language for Data Type Conversion
 #### See Complete Video explanation here for How to use NiFi Expression Language for Data Type Conversion
 
@@ -36,11 +38,11 @@ https://youtu.be/7SzqKeX1y9w
 [How to use NiFi Expression Language for Data Type Conversion](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Data_Type_Conversion.xml)
 
 
-## How to use NiFi Expression Language Logical Operators
-#### See Complete Video explanation here for How to use NiFi Expression Language Logical Operators
+## How to use NiFi Expression Language Boolean Logical Operators
+#### See Complete Video explanation here for How to use NiFi Expression Language Boolean Logical Operators
 
 #### Download the used template from here
-[How to use NiFi Expression Language Logical Operators](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Logic_Operators.xml)
+[How to use NiFi Expression Language Boolean Logical Operators](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi%20Expression%20Language/templates/Expression_Language_-_Boolean_Logic_Operators.xml)
 
 
 ## How to use NiFi Expression Language Mathematical Operators
