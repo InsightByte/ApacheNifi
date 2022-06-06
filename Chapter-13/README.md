@@ -1,6 +1,10 @@
 
 # How to Create NiFi Flow Programmatically using NiFi Rest Api
 
+![Flow](https://github.com/InsightByte/ApacheNifi/blob/main/Chapter-13/assets/flow.png)
+
+
+## See full Video tutorial on How to Create a NiFi Flow Programmatically using NiFi Rest Api 
 
 ### Export some parameters to fit your setup
 ```
