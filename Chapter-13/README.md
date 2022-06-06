@@ -5,6 +5,8 @@
 
 
 ## See full Video tutorial on How to Create a NiFi Flow Programmatically using NiFi Rest Api 
+https://youtu.be/goudIj8R6nM
+
 
 ### Export some parameters to fit your setup
 ```
