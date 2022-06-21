@@ -1,0 +1,71 @@
+{
+    "name": "local mysql parameters",
+    "description": "local mysql parameters",
+    "parameters": [
+        {
+            "parameter": {
+                "name": "drivers_directory",
+                "description": "location where jdbc drivers are located",
+                "sensitive": false,
+                "value": "/opt/nifi-prd/drivers/"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_name",
+                "description": "database name",
+                "sensitive": false,
+                "value": "demo"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_port",
+                "description": "database port",
+                "sensitive": false,
+                "value": "3306"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_host",
+                "description": "database host",
+                "sensitive": false,
+                "value": "localhost"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_user",
+                "description": "database user name",
+                "sensitive": false,
+                "value": "root"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_driver_class",
+                "description": "database driver class name",
+                "sensitive": false,
+                "value": "com.mysql.jdbc.Driver"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_driver_file",
+                "description": "database driver file name",
+                "sensitive": false,
+                "value": "mysql-connector-java-8.0.29.jar"
+            }
+        },
+        {
+            "parameter": {
+                "name": "db_user_pass",
+                "description": "database user password",
+                "sensitive": true,
+                "value": "root"
+            }
+        }
+    ],
+    "inheritedParameterContexts" : [ ]
+}
