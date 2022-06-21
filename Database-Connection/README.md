@@ -5,7 +5,7 @@
 
 ### Connect Apache NiFi to Mysql Database.
 
-```jdbc:mysql://<hostname>:<port>/<dbname>```
+```jdbc:mysql://#{db_host}:#{db_port}/#{db_name}```
 ### Driver Class
 ```com.mysql.jdbc.Driver```
 
@@ -13,9 +13,8 @@
 [MySQL Driver](https://dbschema.com/jdbc-drivers/MySqlJdbcDriver.zip)
 
 
-
 ### Connect Apache NiFi to PostgreSQL Database.
-```jdbc:postgresql://<hostname>:<port>/<dbname>```
+```jdbc:postgresql://#{db_host}:#{db_port}/#{db_name}```
 ### Driver Class
 ```com.mysql.jdbc.Driver```
 ### JDBC Driver location 
