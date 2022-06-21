@@ -9,7 +9,7 @@ In this chapter we are going to learn How to connect Apache NiFi to different ty
 ```com.mysql.jdbc.Driver```
 
 ### JDBC Driver location 
-(MySQL Driver)[https://dbschema.com/jdbc-drivers/MySqlJdbcDriver.zip]
+[MySQL Driver](https://dbschema.com/jdbc-drivers/MySqlJdbcDriver.zip)
 
 
 
@@ -18,11 +18,11 @@ In this chapter we are going to learn How to connect Apache NiFi to different ty
 ### Driver Class
 ```com.mysql.jdbc.Driver```
 ### JDBC Driver location 
-(PostgreSQL Driver)[https://jdbc.postgresql.org/download/postgresql-42.4.0.jar]
+[PostgreSQL Driver](https://jdbc.postgresql.org/download/postgresql-42.4.0.jar)
 
 
 ### Follow this link for more DB Driver and their jdbc url config.
-(DBSchema)[https://dbschema.com/databases.html]
+[DBSchema](https://dbschema.com/databases.html)
 
 
 ### Download the drivers into folder drivers on the NiFi host
@@ -30,7 +30,7 @@ In this chapter we are going to learn How to connect Apache NiFi to different ty
 
 
 ### Create the Parameter Context for the MySQL Database (optional via Toolkit)
-See how to setup NiFi toolkit here (Setup NiFi Env)[https://youtu.be/A3fVJehWGzk?list=PLkp40uss1kSI66DA_aDCfx02gXipoRQHc] 
+See how to setup NiFi toolkit here [Setup NiFi Env](https://youtu.be/A3fVJehWGzk?list=PLkp40uss1kSI66DA_aDCfx02gXipoRQHc])
 ```
 cd ApacheNifi
 nifi import-param-context -i 'Database-Connection/parameter-context/mysql-config.json' -u http://localhost:8081
