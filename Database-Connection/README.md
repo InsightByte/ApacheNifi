@@ -3,6 +3,8 @@
 
 ![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Database-Connection/assets/dbconn.png)
 
+
+### Find the Full Youtube Tutorial here [Connect NiFi to any Database](https://dbschema.com/jdbc-drivers/MySqlJdbcDriver.zip)
 ### Connect Apache NiFi to Mysql Database.
 
 ```jdbc:mysql://#{db_host}:#{db_port}/#{db_name}```
