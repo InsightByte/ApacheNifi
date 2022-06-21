@@ -1,6 +1,7 @@
-In this chapter we are going to learn How to connect Apache NiFi to different types of databases.
+## In this chapter we are going to learn How to connect Apache NiFi to different types of databases.
 
 
+![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Database-Connection/assets/dbconn.png
 
 ### Connect Apache NiFi to Mysql Database.
 
