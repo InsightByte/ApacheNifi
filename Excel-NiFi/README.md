@@ -12,8 +12,8 @@ See how to setup NiFi toolkit here [Setup NiFi Env](https://youtu.be/A3fVJehWGzk
 
 ```
 cd ApacheNifi
-nifi import-param-context -i 'Excell-NiFi/parameter_context/mysql-config.json' -u http://localhost:8081
-nifi import-param-context -i 'Excell-NiFi/parameter_context/excell-tracker-config.json' -u http://localhost:8081
+nifi import-param-context -i 'Excel-NiFi/parameter_context/mysql-config.json' -u http://localhost:8081
+nifi import-param-context -i 'Excel-NiFi/parameter_context/excell-tracker-config.json' -u http://localhost:8081
 ```
 
 
