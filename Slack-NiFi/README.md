@@ -1,6 +1,6 @@
 ## In this chapter we are going to learn How to send Slack message from Apache NiFi
 
-![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Excel-NiFi/assets/slack.png)
+![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Slack-NiFi/assets/slack.png)
 
 
 
