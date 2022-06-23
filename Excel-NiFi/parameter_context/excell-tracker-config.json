@@ -7,7 +7,7 @@
                 "name": "source_directory",
                 "description": "location where excell files are located",
                 "sensitive": false,
-                "value": "/Users/adrianoprea/Desktop/InsightByte/GitRepo/Excell-NiFi/excell_data"
+                "value": "/Users/adrianoprea/Desktop/InsightByte/GitRepo/ApacheNifi/Excel-NiFi/excel_data"
             }
         },
         {

@@ -358,7 +358,7 @@
                         <properties>
                             <entry>
 <key>Input Directory</key>
-<value>/Users/adrianoprea/Desktop/InsightByte/GitRepo/Excell-NiFi/excell_data</value>
+<value>#{source_directory}</value>
                             </entry>
                             <entry>
 <key>listing-strategy</key>

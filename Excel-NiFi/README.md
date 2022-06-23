@@ -3,11 +3,17 @@
 ![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Excel-NiFi/assets/image.png)
 
 
-### Find the Full Youtube Tutorial here [How to Automate Excel Data Extraction/Migration to MySQL with Apache NiFi](https://www.youtube.com/watch?v=)
+## Part 1
+### Find the Full Youtube Tutorial here [How to Read Excel data with Apache NiFi](https://youtu.be/bn08IL_UHsQ)
+
+## Part 2 
+### Find the Full Youtube Tutorial here [How to Read Multi sheet Excel with Apache NiFi](https://youtu.be/39HPMQrK9RA)
+
+## Part 3 
+### Find the Full Youtube Tutorial here [How to Read Multi sheet Excel with Apache NiFi](https://youtu.be/VhGHRYateqg)
 
 
 ### Create the Parameter Context for the MySQL Database (optional via Toolkit)
-
 See how to setup NiFi toolkit here [Setup NiFi Env](https://youtu.be/A3fVJehWGzk?list=PLkp40uss1kSI66DA_aDCfx02gXipoRQHc])
 
 ```
