@@ -1,10 +1,9 @@
-## In this chapter we are going to learn How to connect Apache NiFi to different types of databases.
-
+## In this chapter we are going to learn How to Automate Excel Data Extraction/Migration to MySQL with Apache NiFi
 
 ![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Excel-NiFi/assets/image.png)
 
 
-### Find the Full Youtube Tutorial here [Connect NiFi to any Database](https://www.youtube.com/watch?v=ahc6IXlXwU8)
+### Find the Full Youtube Tutorial here [How to Automate Excel Data Extraction/Migration to MySQL with Apache NiFi](https://www.youtube.com/watch?v=)
 
 
 ### Create the Parameter Context for the MySQL Database (optional via Toolkit)
