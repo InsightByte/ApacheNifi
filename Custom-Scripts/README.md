@@ -28,14 +28,13 @@ Download Template from [ExecuteScript Apache NiFi](https://github.com/InsightByt
 
 This processor demonstrate how we can run custom scripts using the incoming Flow File and a Process Session.
 The action we are performing 
-- Create New Attribute
-- Create New Attribute from existing Attribute
-- Create Attributes from a Json List
-- Append to a Flow File Content
-- Overwrite Flow Content
-- Write to Flow Content
-- Read Transform and Write Flow Content
-- Remove Element from Flow Content
+- Create New Attribute [ExecuteScript Apache NiFi](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/create_new_attribute.py)
+- Create New Attribute from existing Attribute[Create New Attribute from existing Attribute](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/create_new_attribute_from_existing.py)
+- Create Attributes from a Json List [Create Attributes from a Json List](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/create_attributes_from_list.py)
+- Append to a Flow File Content [Append](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/append_to_flow_content.py)
+- Overwrite Flow Content [Overwrite Flow](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/overwrite_flow_content.py)
+- Read Transform and Write Flow Content [Read Transform](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/read_transform_write.py)
+- Remove Element from Flow Content [Remove Element](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/scripts/executeScript/read_remove_element_write.py)
   
 
 
