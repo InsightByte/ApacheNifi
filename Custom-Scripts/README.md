@@ -11,14 +11,14 @@
 
 #### ExecuteStreamCommand
 
-Download Temaplate from [ExecuteScremCommand Apache NiFi](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/templates/executeSteam.xml)
+Download Template from [ExecuteScremCommand Apache NiFi](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/templates/executeSteam.xml)
 
 This processor demonstrate how we can run custom Bash,Python,Java and Ruby scripts from Apache NiFi
 
 
 #### ExecuteScript
 
-Download Temaplate from [ExecuteScript Apache NiFi](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/templates/executeScript.xml)
+Download Template from [ExecuteScript Apache NiFi](https://github.com/InsightByte/ApacheNifi/blob/main/Custom-Scripts/templates/executeScript.xml)
 
 This processor demonstrate how we can run custom scripts using the incoming Flow File and a Process Session.
 
