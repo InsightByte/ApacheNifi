@@ -1,10 +1,11 @@
 
 ## This repo contains flows that demonstrate how Apache NiFi inegrates with MongoDB
 
-![Run Custom Scripts](https://github.com/InsightByte/ApacheNifi/blob/main/assets/images/Mongo-Lookup.png)
+![NiFi-MongoDB](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-and-MangoDB/assets/images/Mongo-Lookup.png)
 
-#### See how to install MongoDB 
-https://www.youtube.com/watch?v=qTz5l3UORtA
+#### See how to install MongoDB ![Install MongoDB](https://www.youtube.com/watch?v=qTz5l3UORtA)
+
+
 
 ## How to Insert a Record in MongoDB with Apache NiFi
 
