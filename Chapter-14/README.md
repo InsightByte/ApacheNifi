@@ -3,11 +3,11 @@
 
 ### In this chapter will go over Apache NiFi Site-to-Site.
 
-What is Apache NiFi S2S ? 
-We will cover what is used for.
-What are the benefits of using S2S.
-How to configure S2S.
-Run a full Demo of Apache NiFi S2S in action.
+- What is Apache NiFi S2S ? 
+- We will cover what is used for.
+- What are the benefits of using S2S.
+- How to configure S2S.
+- Run a full Demo of Apache NiFi S2S in action.
 
 #### What is Apache NiFi S2S ? 
 

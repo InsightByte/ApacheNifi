@@ -114,4 +114,11 @@ curl -H 'Content-Type: application/json' -XPUT -d '{"id":"'$pg_id'","state":"RUN
 curl -H 'Content-Type: application/json' -XPUT -d '{"id":"'$pg_id'","state":"STOPPED"}' http://$hostname:$port/nifi-api/flow/process-groups/$pg_id
 ```
 
+curl -i -X PUT -H 'Content-Type: application/json' -d '{"revision":{"version":??,"clientId":"test"},"processor":{"id":"20eb7bbd-2f68-4538-aa13-0f4fa33e63c4","state":"RUNNING"}}' 
+
+
+
+http://localhost:8080/nifi-api/process-groups/d090bc40-0180-1000-f1dc-2b64efc5a2ab/process-groups
+
+
 

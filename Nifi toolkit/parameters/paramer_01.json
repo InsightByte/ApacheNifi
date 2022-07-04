@@ -1,22 +1,23 @@
 {
     "name": "parameter context demo",
-    "description": "my parameter context description",
+    "description": "param context description",
     "parameters": [
         {
             "parameter": {
-                "name": "param1",
-                "description": "param1 description",
+                "name": "input_directory",
+                "description": "input_directory description",
                 "sensitive": false,
-                "value": "param1 value"
+                "value": "/opt/data_demos/pg1_read"
             }
         },
         {
             "parameter": {
-                "name": "param2",
-                "description": "param2 description",
-                "sensitive": true,
-                "value": "param2 value"
+                "name": "output_directory",
+                "description": "output_directory description",
+                "sensitive": false,
+                "value": "/opt/data_demos/pg1_put"
             }
         }
-    ]
+    ],
+    "inheritedParameterContexts" : [ ]
 }

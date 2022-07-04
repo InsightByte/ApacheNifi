@@ -1,0 +1,23 @@
+{
+    "name": "parameter context demo2",
+    "description": "param context description",
+    "parameters": [
+        {
+            "parameter": {
+                "name": "input_directory",
+                "description": "input_directory description",
+                "sensitive": false,
+                "value": "/opt/data_demos/pg2_read"
+            }
+        },
+        {
+            "parameter": {
+                "name": "output_directory",
+                "description": "output_directory description",
+                "sensitive": false,
+                "value": "/opt/data_demos/pg2_put"
+            }
+        }
+    ],
+    "inheritedParameterContexts" : [ ]
+}

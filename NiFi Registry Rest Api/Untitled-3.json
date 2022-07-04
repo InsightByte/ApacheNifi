@@ -1,0 +1,577 @@
+{
+    "processors": [
+        {
+            "revision": {
+                "clientId": "2e4d3895-564c-1f46-8685-903b4ea064f3",
+                "version": 1
+            },
+            "id": "2e4d3898-564c-1f46-89f0-f14e44730837",
+            "uri": "http://localhost:8081/nifi-api/processors/2e4d3898-564c-1f46-89f0-f14e44730837",
+            "position": {
+                "x": 422.71425929533984,
+                "y": -208.97469755380064
+            },
+            "permissions": {
+                "canRead": true,
+                "canWrite": true
+            },
+            "bulletins": [],
+            "component": {
+                "id": "2e4d3898-564c-1f46-89f0-f14e44730837",
+                "parentGroupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                "position": {
+                    "x": 422.71425929533984,
+                    "y": -208.97469755380064
+                },
+                "name": "GenerateFlowFile",
+                "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.16.1"
+                },
+                "state": "STOPPED",
+                "style": {},
+                "relationships": [
+                    {
+                        "name": "success",
+                        "description": "",
+                        "autoTerminate": false,
+                        "retry": false
+                    }
+                ],
+                "supportsParallelProcessing": true,
+                "supportsEventDriven": false,
+                "supportsBatching": true,
+                "persistsState": false,
+                "restricted": false,
+                "deprecated": false,
+                "executionNodeRestricted": false,
+                "multipleVersionsAvailable": false,
+                "inputRequirement": "INPUT_FORBIDDEN",
+                "config": {
+                    "properties": {
+                        "File Size": "0B",
+                        "Batch Size": "1",
+                        "Data Format": "Text",
+                        "Unique FlowFiles": "false",
+                        "generate-ff-custom-text": null,
+                        "character-set": "UTF-8",
+                        "mime-type": null
+                    },
+                    "descriptors": {
+                        "File Size": {
+                            "name": "File Size",
+                            "displayName": "File Size",
+                            "description": "The size of the file that will be used",
+                            "defaultValue": "0B",
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Batch Size": {
+                            "name": "Batch Size",
+                            "displayName": "Batch Size",
+                            "description": "The number of FlowFiles to be transferred in each invocation",
+                            "defaultValue": "1",
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Data Format": {
+                            "name": "Data Format",
+                            "displayName": "Data Format",
+                            "description": "Specifies whether the data should be Text or Binary",
+                            "defaultValue": "Text",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "Binary",
+                                        "value": "Binary"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "Text",
+                                        "value": "Text"
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Unique FlowFiles": {
+                            "name": "Unique FlowFiles",
+                            "displayName": "Unique FlowFiles",
+                            "description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+                            "defaultValue": "false",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "true",
+                                        "value": "true"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "false",
+                                        "value": "false"
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "generate-ff-custom-text": {
+                            "name": "generate-ff-custom-text",
+                            "displayName": "Custom Text",
+                            "description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": true,
+                            "expressionLanguageScope": "Variable Registry Only",
+                            "dependencies": []
+                        },
+                        "character-set": {
+                            "name": "character-set",
+                            "displayName": "Character Set",
+                            "description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+                            "defaultValue": "UTF-8",
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "mime-type": {
+                            "name": "mime-type",
+                            "displayName": "Mime Type",
+                            "description": "Specifies the value to set for the \"mime.type\" attribute.",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        }
+                    },
+                    "schedulingPeriod": "0 sec",
+                    "schedulingStrategy": "TIMER_DRIVEN",
+                    "executionNode": "ALL",
+                    "penaltyDuration": "30 sec",
+                    "yieldDuration": "1 sec",
+                    "bulletinLevel": "WARN",
+                    "runDurationMillis": 0,
+                    "concurrentlySchedulableTaskCount": 1,
+                    "comments": "",
+                    "lossTolerant": false,
+                    "defaultConcurrentTasks": {
+                        "TIMER_DRIVEN": "1",
+                        "EVENT_DRIVEN": "0",
+                        "CRON_DRIVEN": "1"
+                    },
+                    "defaultSchedulingPeriod": {
+                        "TIMER_DRIVEN": "0 sec",
+                        "CRON_DRIVEN": "* * * * * ?"
+                    },
+                    "retryCount": 10,
+                    "retriedRelationships": [],
+                    "backoffMechanism": "PENALIZE_FLOWFILE",
+                    "maxBackoffPeriod": "10 mins"
+                },
+                "validationStatus": "VALID",
+                "extensionMissing": false
+            },
+            "inputRequirement": "INPUT_FORBIDDEN",
+            "status": {
+                "groupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                "id": "2e4d3898-564c-1f46-89f0-f14e44730837",
+                "name": "GenerateFlowFile",
+                "runStatus": "Stopped",
+                "statsLastRefreshed": "13:50:11 AEST",
+                "aggregateSnapshot": {
+                    "id": "2e4d3898-564c-1f46-89f0-f14e44730837",
+                    "groupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                    "name": "GenerateFlowFile",
+                    "type": "GenerateFlowFile",
+                    "runStatus": "Stopped",
+                    "executionNode": "ALL",
+                    "bytesRead": 0,
+                    "bytesWritten": 0,
+                    "read": "0 bytes",
+                    "written": "0 bytes",
+                    "flowFilesIn": 0,
+                    "bytesIn": 0,
+                    "input": "0 (0 bytes)",
+                    "flowFilesOut": 0,
+                    "bytesOut": 0,
+                    "output": "0 (0 bytes)",
+                    "taskCount": 0,
+                    "tasksDurationNanos": 0,
+                    "tasks": "0",
+                    "tasksDuration": "00:00:00.000",
+                    "activeThreadCount": 0,
+                    "terminatedThreadCount": 0
+                }
+            },
+            "operatePermissions": {
+                "canRead": true,
+                "canWrite": true
+            }
+        },
+        {
+            "revision": {
+                "clientId": "2e4d3895-564c-1f46-8685-903b4ea064f3",
+                "version": 4
+            },
+            "id": "2e4d3899-564c-1f46-ebe6-0835d3e7c7c7",
+            "uri": "http://localhost:8081/nifi-api/processors/2e4d3899-564c-1f46-ebe6-0835d3e7c7c7",
+            "position": {
+                "x": 416.0,
+                "y": 96.0
+            },
+            "permissions": {
+                "canRead": true,
+                "canWrite": true
+            },
+            "bulletins": [],
+            "component": {
+                "id": "2e4d3899-564c-1f46-ebe6-0835d3e7c7c7",
+                "parentGroupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                "position": {
+                    "x": 416.0,
+                    "y": 96.0
+                },
+                "name": "LogAttribute",
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.16.1"
+                },
+                "state": "DISABLED",
+                "style": {},
+                "relationships": [
+                    {
+                        "name": "success",
+                        "description": "All FlowFiles are routed to this relationship",
+                        "autoTerminate": false,
+                        "retry": false
+                    }
+                ],
+                "supportsParallelProcessing": true,
+                "supportsEventDriven": true,
+                "supportsBatching": true,
+                "persistsState": false,
+                "restricted": false,
+                "deprecated": false,
+                "executionNodeRestricted": false,
+                "multipleVersionsAvailable": false,
+                "inputRequirement": "INPUT_REQUIRED",
+                "config": {
+                    "properties": {
+                        "Log Level": "info",
+                        "Log Payload": "false",
+                        "Attributes to Log": null,
+                        "attributes-to-log-regex": ".*",
+                        "Attributes to Ignore": null,
+                        "attributes-to-ignore-regex": null,
+                        "Log FlowFile Properties": "true",
+                        "Output Format": "Line per Attribute",
+                        "Log prefix": null,
+                        "character-set": "UTF-8"
+                    },
+                    "descriptors": {
+                        "Log Level": {
+                            "name": "Log Level",
+                            "displayName": "Log Level",
+                            "description": "The Log Level to use when logging the Attributes",
+                            "defaultValue": "info",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "trace",
+                                        "value": "trace"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "debug",
+                                        "value": "debug"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "info",
+                                        "value": "info"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "warn",
+                                        "value": "warn"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "error",
+                                        "value": "error"
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Log Payload": {
+                            "name": "Log Payload",
+                            "displayName": "Log Payload",
+                            "description": "If true, the FlowFile's payload will be logged, in addition to its attributes; otherwise, just the Attributes will be logged.",
+                            "defaultValue": "false",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "true",
+                                        "value": "true"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "false",
+                                        "value": "false"
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Attributes to Log": {
+                            "name": "Attributes to Log",
+                            "displayName": "Attributes to Log",
+                            "description": "A comma-separated list of Attributes to Log. If not specified, all attributes will be logged unless `Attributes to Log by Regular Expression` is modified. There's an AND relationship between the two properties.",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "attributes-to-log-regex": {
+                            "name": "attributes-to-log-regex",
+                            "displayName": "Attributes to Log by Regular Expression",
+                            "description": "A regular expression indicating the Attributes to Log. If not specified, all attributes will be logged unless `Attributes to Log` is modified. There's an AND relationship between the two properties.",
+                            "defaultValue": ".*",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Attributes to Ignore": {
+                            "name": "Attributes to Ignore",
+                            "displayName": "Attributes to Ignore",
+                            "description": "A comma-separated list of Attributes to ignore. If not specified, no attributes will be ignored unless `Attributes to Ignore by Regular Expression` is modified. There's an OR relationship between the two properties.",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "attributes-to-ignore-regex": {
+                            "name": "attributes-to-ignore-regex",
+                            "displayName": "Attributes to Ignore by Regular Expression",
+                            "description": "A regular expression indicating the Attributes to Ignore. If not specified, no attributes will be ignored unless `Attributes to Ignore` is modified. There's an OR relationship between the two properties.",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Log FlowFile Properties": {
+                            "name": "Log FlowFile Properties",
+                            "displayName": "Log FlowFile Properties",
+                            "description": "Specifies whether or not to log FlowFile \"properties\", such as Entry Date, Lineage Start Date, and content size",
+                            "defaultValue": "true",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "true",
+                                        "value": "true"
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "false",
+                                        "value": "false"
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Output Format": {
+                            "name": "Output Format",
+                            "displayName": "Output Format",
+                            "description": "Specifies the format to use for logging FlowFile attributes",
+                            "defaultValue": "Line per Attribute",
+                            "allowableValues": [
+                                {
+                                    "allowableValue": {
+                                        "displayName": "Line per Attribute",
+                                        "value": "Line per Attribute",
+                                        "description": "Each FlowFile attribute will be logged using a single line for the attribute name and another line for the attribute value. This format is often most advantageous when looking at the attributes of a single FlowFile."
+                                    },
+                                    "canRead": true
+                                },
+                                {
+                                    "allowableValue": {
+                                        "displayName": "Single Line",
+                                        "value": "Single Line",
+                                        "description": "All FlowFile attribute names and values will be logged on a single line. This format is often most advantageous when comparing logs from multiple FlowFiles."
+                                    },
+                                    "canRead": true
+                                }
+                            ],
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": false,
+                            "expressionLanguageScope": "Not Supported",
+                            "dependencies": []
+                        },
+                        "Log prefix": {
+                            "name": "Log prefix",
+                            "displayName": "Log prefix",
+                            "description": "Log prefix appended to the log lines. It helps to distinguish the output of multiple LogAttribute processors.",
+                            "required": false,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": true,
+                            "expressionLanguageScope": "Variable Registry and FlowFile Attributes",
+                            "dependencies": []
+                        },
+                        "character-set": {
+                            "name": "character-set",
+                            "displayName": "Character Set",
+                            "description": "The name of the CharacterSet to use",
+                            "defaultValue": "UTF-8",
+                            "required": true,
+                            "sensitive": false,
+                            "dynamic": false,
+                            "supportsEl": true,
+                            "expressionLanguageScope": "Variable Registry and FlowFile Attributes",
+                            "dependencies": []
+                        }
+                    },
+                    "schedulingPeriod": "0 sec",
+                    "schedulingStrategy": "TIMER_DRIVEN",
+                    "executionNode": "ALL",
+                    "penaltyDuration": "30 sec",
+                    "yieldDuration": "1 sec",
+                    "bulletinLevel": "WARN",
+                    "runDurationMillis": 0,
+                    "concurrentlySchedulableTaskCount": 1,
+                    "comments": "",
+                    "lossTolerant": false,
+                    "defaultConcurrentTasks": {
+                        "TIMER_DRIVEN": "1",
+                        "EVENT_DRIVEN": "0",
+                        "CRON_DRIVEN": "1"
+                    },
+                    "defaultSchedulingPeriod": {
+                        "TIMER_DRIVEN": "0 sec",
+                        "CRON_DRIVEN": "* * * * * ?"
+                    },
+                    "retryCount": 10,
+                    "retriedRelationships": [],
+                    "backoffMechanism": "PENALIZE_FLOWFILE",
+                    "maxBackoffPeriod": "10 mins"
+                },
+                "validationErrors": [
+                    "'Relationship success' is invalid because Relationship 'success' is not connected to any component and is not auto-terminated"
+                ],
+                "validationStatus": "INVALID",
+                "extensionMissing": false
+            },
+            "inputRequirement": "INPUT_REQUIRED",
+            "status": {
+                "groupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                "id": "2e4d3899-564c-1f46-ebe6-0835d3e7c7c7",
+                "name": "LogAttribute",
+                "runStatus": "Disabled",
+                "statsLastRefreshed": "13:50:11 AEST",
+                "aggregateSnapshot": {
+                    "id": "2e4d3899-564c-1f46-ebe6-0835d3e7c7c7",
+                    "groupId": "2e4d3897-564c-1f46-befb-66e7ea15b88a",
+                    "name": "LogAttribute",
+                    "type": "LogAttribute",
+                    "runStatus": "Disabled",
+                    "executionNode": "ALL",
+                    "bytesRead": 0,
+                    "bytesWritten": 0,
+                    "read": "0 bytes",
+                    "written": "0 bytes",
+                    "flowFilesIn": 0,
+                    "bytesIn": 0,
+                    "input": "0 (0 bytes)",
+                    "flowFilesOut": 0,
+                    "bytesOut": 0,
+                    "output": "0 (0 bytes)",
+                    "taskCount": 0,
+                    "tasksDurationNanos": 0,
+                    "tasks": "0",
+                    "tasksDuration": "00:00:00.000",
+                    "activeThreadCount": 0,
+                    "terminatedThreadCount": 0
+                }
+            },
+            "operatePermissions": {
+                "canRead": true,
+                "canWrite": true
+            }
+        }
+    ]
+}
