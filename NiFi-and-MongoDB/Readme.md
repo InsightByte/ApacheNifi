@@ -3,7 +3,8 @@
 
 ![NiFi-MongoDB](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-and-MongoDB/assets/images/Mongo-Lookup.png)
 
-#### See how to install MongoDB [How to send Slack message from Apache NiFi](https://youtu.be/qTz5l3UORtA){:target="_blank"}
+#### See how to install MongoDB <a href="https://youtu.be/qTz5l3UORtA" target="_blank">Install MongoDB</a>
+
 
 
 
