@@ -4,7 +4,7 @@
 ![conn](https://github.com/InsightByte/ApacheNifi/blob/main/Database-Switch/assets/db-switch.png)
 
 
-### Find the Full Youtube Tutorial here [Switch Database Endpoint with Apache NiF](https://youtu.be/xk3pJmhXYCE)
+### Find the Full Youtube Tutorial here [Switch Database Endpoint with Apache NiFi](https://youtu.be/xk3pJmhXYCE)
 
 
 ### Find the template used here [Template](https://github.com/InsightByte/ApacheNifi/blob/main/Database-Switch/templates/Database_switch.xml)
