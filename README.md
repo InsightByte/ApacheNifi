@@ -1,3 +1,4 @@
-# ApacheNifi
+# Resources used in my Apache Nifi 2022 Youtube Series
 
-This repo hold Apache NiFi Related resources.
+
+
