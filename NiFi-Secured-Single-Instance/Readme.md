@@ -1,8 +1,9 @@
 
-
-
 # Apache NiFi Secure Standalone Setup
 
+![Apache NiFi Secure Standalone Setup](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-Secured-Single-Instance/assets/NiFi-Secure.png)
+
+##### Find the video version of this article at [Apache NiFi Secure Standalone Setup](https://youtu.be/j-JXo3xPxOk)
 #### Generate Keys and Certificates
 
 ```
@@ -55,7 +56,7 @@ NiFi Properties Processed [/opt/nifi-prd-3/conf/nifi.properties]
 #### Provide the password you used when you generated the certificate
 
 
-#### Edit your authorizations.xml to look like this.
+#### Edit your authorizers.xml to look like this.
 ```
 <authorizers>
      <userGroupProvider>
