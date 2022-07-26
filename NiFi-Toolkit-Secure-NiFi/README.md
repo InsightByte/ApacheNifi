@@ -5,15 +5,18 @@
 ![](https://i.imgur.com/waxVImv.png)
 #### 💬 If you have Questions or wanna have a chat - Join Me on Discord at:
 [Apache NiFi Topics Q&A](https://discord.gg/qymAvnZqmQ)
+
 [Data Engineering Topics Q&A](https://discord.gg/YykpUT5Wt2)
+
 [Data Engineering  Compass Q&A](https://discord.gg/XR3JqUrA74)
+
 ![](https://i.imgur.com/waxVImv.png)
 
 ![Connect to a Secure Apache NiFi with NiFi Toolkit](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-Toolkit-Secure-NiFi/assets/toolkt-secure.png)
 
 ##### Find the video version of this article at [Connect to a Secure Apache NiFi with NiFi Toolkit]()
 
-#### Install NiFi toolkit you have done so.
+#### Install NiFi Toolkit if you have not done so.
 **Download NiFi toolkit & unzip**
 ```
 wget https://dlcdn.apache.org/nifi/1.16.3/nifi-toolkit-1.16.3-bin.zip
