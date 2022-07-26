@@ -10,9 +10,13 @@
 /opt/nifi-toolkit/bin/tls-toolkit.sh standalone -n 'localhost' -B ClientPassword -C 'CN=InsightByte,OU=DEMO' -O -o /opt/nifi-prd-3/certs
 ```
 **-n** hostname accessing NiFi.
+
 **-B** Password for client certificate.
+
 **-C** Generate client certificate suitable for use in browser with specified DN
+
 **-o** The directory to output keystores, truststore, config files.
+
 
 #### This will generate a truststore, keystore and the nifi.properties files along with the client certificates.
 ```
