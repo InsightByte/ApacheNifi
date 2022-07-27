@@ -15,6 +15,8 @@ How to Setup Secure NiFi Registry and connect to Secure Apache NiFi
 
 ![](https://i.imgur.com/waxVImv.png)
 
+##### Find the video version of this article at [How to Setup Secure NiFi Registry and connect to Secure Apache NiFi](https://youtu.be/j-JXo3xPxOk)
+
 #### Make sure you have Download NiFi Registry and unziped it. 
  I have placed my NiFi Registry installation in `/opt/nifi-registry`
 
