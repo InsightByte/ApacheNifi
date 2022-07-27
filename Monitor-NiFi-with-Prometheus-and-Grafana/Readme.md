@@ -1,5 +1,15 @@
 ## Setup NiFi Monitoring with Prometheus and Grafana
 
+![](https://i.imgur.com/waxVImv.png)
+#### 💬 If you have Questions or wanna have a chat - Join Me on Discord at:
+[Apache NiFi Topics Q&A](https://discord.gg/qymAvnZqmQ)
+
+[Data Engineering Topics Q&A](https://discord.gg/YykpUT5Wt2)
+
+[Data Engineering  Compass Q&A](https://discord.gg/XR3JqUrA74)
+
+![](https://i.imgur.com/waxVImv.png)
+
 
 #### Edit the Prometheus yml
 ```
