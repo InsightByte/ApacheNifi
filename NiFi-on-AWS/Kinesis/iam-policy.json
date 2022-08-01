@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": "firehose:ListDeliveryStreams",
+            "Resource": "*"
+        },
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": "firehose:*",
+            "Resource": "arn:aws:firehose:::deliverystream/delivery-stream-name"
+        },
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::demo-insigthbyte/*",
+                "arn:aws:s3:::demo-insigthbyte"
+            ]
+        }
+    ]
+}
