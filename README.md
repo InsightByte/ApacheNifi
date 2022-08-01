@@ -21,8 +21,8 @@ Find the Playlist on Youtube as [Apache Nifi 2022 Youtube Series](https://youtub
 
 * [Apache NiFi User Interface Walk through - Part 1](https://youtu.be/nisWXIRXyq0) 
   ##### Covered Topics
-    Brief intro into Available UI Toolbars - 01:16
-    Apache NiFi Components Toolbar - Processor component Explained - 03:36
+    - Brief intro into Available UI Toolbars - 01:16
+    - Apache NiFi Components Toolbar - Processor component Explained - 03:36
 
 ![](https://i.imgur.com/waxVImv.png)
 * [Apache NiFi User Interface Walk through - Part 2](https://youtu.be/Dyx6YXa8rmQ)
