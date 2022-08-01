@@ -16,9 +16,26 @@ Find the Playlist on Youtube as [Apache Nifi 2022 Youtube Series](https://youtub
 #### Here are the Chapters in the order your should follow them to get a better understanding of Apache NiFi
 
 * [Apache NiFi Series Intro/Expression of Interest](https://youtu.be/hpVZWYbifnc) 
+  
 * [Apache NiFi Core Concepts and Architecture](https://youtu.be/TMGxkKNbHS8) 
-* [Apache NiFi Installation](https://youtu.be/M724RJYaXhs) 
+  ##### Covered Topics
+  - What is Flow Based Programming(FBP) - 00:30
+  - Flow Based Programming(FBP) vs Apache NiFi (Terms) - 01:51
+  - Apache NiFi Architecture Walk-through - 06:48
+  - Apache NiFi Cluster Architecture - 15:03
+  - Apache NiFi Registry Role - 19:03
 
+![](https://i.imgur.com/waxVImv.png)
+* [Apache NiFi Installation](https://youtu.be/M724RJYaXhs) 
+  ##### Covered Topics
+  - Go over the Agenda - 00:21
+  - Download resources - 01:06
+  - Go over main configuration files - 03:36
+  - Startup Apache NiFi - 08:58
+  - Create new admin user in Apache NiFi - 14:17
+  - Recap of what we have done - 17:34
+  
+![](https://i.imgur.com/waxVImv.png)
 * [Apache NiFi User Interface Walk through - Part 1](https://youtu.be/nisWXIRXyq0) 
   ##### Covered Topics
     - Brief intro into Available UI Toolbars - 01:16
