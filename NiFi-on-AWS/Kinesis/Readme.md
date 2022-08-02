@@ -48,6 +48,9 @@ export aws_account_id=`aws sts get-caller-identity --output text | awk {'print $
 # Delete Delivery Stream
 aws firehose delete-delivery-stream --delivery-stream-name 'my-delivery-stream' --no-cli-pager
 
+# Detach Policy from role 
+aws iam detach-role-policy --policy-arn arn:aws:iam::${aws_account_id}:policy/access_to_kinesis --role-name Firehose-Role --no-cli-pager
+
 # Delete Policy
 aws iam delete-policy --policy-arn arn:aws:iam::${aws_account_id}:policy/access_to_kinesis
 
