@@ -1,8 +1,8 @@
 
-![](/ApacheNifi/NiFi-on-AWS/Kinesis/assets/aws-kinesis.png)
+[](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-on-AWS/Kinesis/assets/aws-kinesis.png)
 
-#### Apache NiFi Template location
-![](/ApacheNifi/NiFi-on-AWS/Kinesis/assets/kinesis.xml)
+#### Apache NiFi Template location 
+[Link](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-on-AWS/Kinesis/assets/kinesis.xml)
 #### Create the AWS Kinesis Stream
 ```
 aws kinesis create-stream --stream-name 'my-demo-stream' --shard-count 1
