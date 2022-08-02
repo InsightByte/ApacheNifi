@@ -1,4 +1,8 @@
 
+![](/ApacheNifi/NiFi-on-AWS/Kinesis/assets/aws-kinesis.png)
+
+#### Apache NiFi Template location
+![](/ApacheNifi/NiFi-on-AWS/Kinesis/assets/kinesis.xml)
 #### Create the AWS Kinesis Stream
 ```
 aws kinesis create-stream --stream-name 'my-demo-stream' --shard-count 1
@@ -54,4 +58,5 @@ aws iam delete-role --role-name Firehose-Role
 aws firehose delete-delivery-stream --delivery-stream-name 'my-delivery-stream'
 
 # Empty bucket and delete
-aws s3 rb s3://demo-insigthbyte --force  
+aws s3 rb s3://demo-insigthbyte --force 
+```
