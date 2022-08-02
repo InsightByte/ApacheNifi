@@ -3,6 +3,9 @@
 
 #### Apache NiFi Template location 
 [Link](https://github.com/InsightByte/ApacheNifi/blob/main/NiFi-on-AWS/Kinesis/assets/kinesis.xml)
+
+
+#### Find the Youtube tutorial here [Link](https://youtu.be/doaCJHJ4rB0)
 #### Create the AWS Kinesis Stream
 ```
 aws kinesis create-stream --stream-name 'my-demo-stream' --shard-count 1
