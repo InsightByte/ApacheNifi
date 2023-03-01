@@ -4,8 +4,7 @@
 
 ##  Apache NiFi Epoch to Date conversion with examples
 
-- Find Template here - ![NiFi DynamoDB Template](https://github.com/InsightByte/ApacheNifi/blob/main/NIFI-DynamoDB/template/)
+- Find Template in the template folder
 
-
-- Find Video explanation here for - How to Write to DynamoDB with Apache NiFi - [How to Write to DynamoDB with Apache NiFi](https://youtu.be/pQWGXX-dx2s)
-- Find Video explanation here for - How to Read from DynamoDB with Apache NiFi - [How to Read from DynamoDB with Apache NiFi](https://youtu.be/pQWGXX-dx2s)
+- Find Video explanation here for - How to Write to DynamoDB with Apache NiFi - [How to Write to DynamoDB with Apache NiFi](https://youtu.be/Aw6PCz8gbmA)
+- Find Video explanation here for - How to Read from DynamoDB with Apache NiFi - [How to Read from DynamoDB with Apache NiFi](https://youtu.be/_TydOjcG0L0)
