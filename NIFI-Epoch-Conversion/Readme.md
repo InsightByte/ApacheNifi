@@ -6,4 +6,4 @@
 
 - Find Template here - ![NiFi Epoch to Date conversion Template](https://github.com/InsightByte/ApacheNifi/blob/main/NIFI-Epoch-Conversion/template/Epoch_conversion.xml)
 
-- Find Video explanation here - [Apache NiFi Epoch to Date conversion with examples](https://youtu.be/KgBJ8wbzbX0)
+- Find Video explanation here - [Apache NiFi Epoch to Date conversion with examples](https://youtu.be/pQWGXX-dx2s)
