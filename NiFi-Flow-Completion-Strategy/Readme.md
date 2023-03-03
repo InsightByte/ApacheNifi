@@ -6,8 +6,5 @@
 
 - Find Template in the template folder
 
-- Find Video explanation here for - How to monitor Flow Completion in NiFi - [How to monitor Flow Completion in NiFi](https://youtu.be/Aw6PCz8gbmA)
+- Find Video explanation here for - How to monitor Flow Completion in NiFi - [How to monitor Flow Completion in NiFi](https://youtu.be/SvYFV4f_PCY
 
-
-
-How to Write to DynamoDB with Apache NiFi - [How to monitor Flow Completion in NiFi](https://youtu.be/Aw6PCz8gbmA)
