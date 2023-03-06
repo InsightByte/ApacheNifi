@@ -1,0 +1,23 @@
+<HTML>
+
+    <HEAD>
+        <TITLE>You are doing something wrong here !</TITLE>
+        <style>
+            code {
+              font-family: Consolas,"courier new";
+              color: crimson;
+              background-color: #f1f1f1;
+              padding: 2px;
+              font-size: 105%;
+            }</style>
+    </HEAD>
+    
+    <BODY BGCOLOR="FFFFFF">
+        <HR>
+    <p>This endpoint <code>${http.request.url}</code> does not exists</p>
+   
+        <h2>Here are the valid api endpoint for you to use:</h2>
+        <li><code>http://localhost:9999/api?name=<value>&age=<value>&gender=<value></code></li>
+        <li><code>http://localhost:9999/some_other_api?<whatever you fell like></code></li>
+    </BODY>
+    </HTML>
